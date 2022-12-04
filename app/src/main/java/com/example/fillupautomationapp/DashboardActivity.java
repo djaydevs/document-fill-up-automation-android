@@ -16,6 +16,9 @@ public class DashboardActivity extends DrawerBaseActivity {
         setContentView(R.layout.activity_dashboard);
 
         activityDashboardBinding = ActivityDashboardBinding.inflate(getLayoutInflater());
+
         setContentView(activityDashboardBinding.getRoot());
+
+        allocateActivityTitle("Dashboard");
     }
 }

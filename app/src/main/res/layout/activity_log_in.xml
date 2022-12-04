@@ -25,7 +25,7 @@
         android:layout_below="@+id/logo"
         android:text="DOCUMENT FILL-UP AUTOMATION APP"
         android:textSize="28dp"
-        android:textColor="#03577A"
+        android:textColor="@color/blue"
         android:textStyle="bold"
         android:textAlignment="center"/>
     
@@ -60,7 +60,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/username"
             android:background="@drawable/etbox_login"
-            android:textColor="#03577A"
+            android:textColor="@color/blue2"
             android:layout_marginLeft="25dp"
             android:layout_marginRight="25dp"
             android:drawableLeft="@drawable/ic_baseline_person_24"
@@ -81,7 +81,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/password"
             android:background="@drawable/etbox_login"
-            android:textColor="#03577A"
+            android:textColor="@color/blue2"
             android:layout_marginLeft="25dp"
             android:layout_marginRight="25dp"
             android:drawableLeft="@drawable/ic_baseline_lock_24"

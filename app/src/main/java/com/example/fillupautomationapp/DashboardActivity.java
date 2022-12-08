@@ -13,7 +13,7 @@ public class DashboardActivity extends DrawerBaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_dashboard);
+        //setContentView(R.layout.activity_dashboard);
 
         activityDashboardBinding = ActivityDashboardBinding.inflate(getLayoutInflater());
 

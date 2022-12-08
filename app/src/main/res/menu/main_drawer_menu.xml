@@ -4,11 +4,14 @@
         <item android:id="@+id/navDash"
             android:title="Dashboard" />
 
+        <item android:id="@+id/navDF"
+            android:title="Document Fill-Up" />
+
+        <item android:id="@+id/navRR"
+            android:title="Residents Registration" />
+
         <item android:id="@+id/navRD"
             android:title="Residents Data" />
-
-        <item android:id="@+id/navTH"
-            android:title="Transaction History" />
 
         <item android:id="@+id/navLogout"
             android:title="Log Out" />

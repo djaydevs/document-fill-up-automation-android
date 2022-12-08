@@ -48,13 +48,18 @@ public class DrawerBaseActivity extends AppCompatActivity implements NavigationV
                 overridePendingTransition(0,0);
                 break;
 
-            case R.id.navRD:
-                startActivity(new Intent(this, ResidentsDataActivity.class));
+            case R.id.navDF:
+                startActivity(new Intent(this, DocumentFillUpActivity.class));
                 overridePendingTransition(0,0);
                 break;
 
-            case R.id.navTH:
-                startActivity(new Intent(this, TransactionHitoryActivity.class));
+            case R.id.navRR:
+                startActivity(new Intent(this, ResidentsRegistrationActivity.class));
+                overridePendingTransition(0,0);
+                break;
+
+            case R.id.navRD:
+                startActivity(new Intent(this, ResidentsDataActivity.class));
                 overridePendingTransition(0,0);
                 break;
 

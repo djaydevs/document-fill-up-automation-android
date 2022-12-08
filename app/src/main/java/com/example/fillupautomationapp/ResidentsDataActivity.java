@@ -13,6 +13,7 @@ public class ResidentsDataActivity extends DrawerBaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //setContentView(R.layout.activity_residents_data);
 
         activityResidentsDataBinding = ActivityResidentsDataBinding.inflate(getLayoutInflater());
 

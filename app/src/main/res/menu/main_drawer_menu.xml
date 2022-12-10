@@ -1,19 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <group android:checkableBehavior="single">
-        <item android:id="@+id/navDash"
+        <item
+            android:id="@+id/navDash"
+            android:fontFamily="@font/poppins"
+            android:icon="@drawable/ic_dashboard"
             android:title="Dashboard" />
 
-        <item android:id="@+id/navDF"
-            android:title="Document Fill-Up" />
+        <item
+            android:id="@+id/navDF"
+            android:icon="@drawable/ic_fillup"
+            android:title="Document Fill-Up"
+            android:fontFamily="@font/poppins" />
 
-        <item android:id="@+id/navRR"
-            android:title="Residents Registration" />
+        <item
+            android:id="@+id/navRR"
+            android:icon="@drawable/ic_addpeople"
+            android:title="Residents Registration"
+            android:fontFamily="@font/poppins" />
 
-        <item android:id="@+id/navRD"
-            android:title="Residents Data" />
+        <item
+            android:id="@+id/navRD"
+            android:icon="@drawable/ic_people"
+            android:title="Residents Data"
+            android:fontFamily="@font/poppins" />
 
-        <item android:id="@+id/navLogout"
-            android:title="Log Out" />
+        <item
+            android:id="@+id/navLogout"
+            android:icon="@drawable/ic_logout"
+            android:title="Log Out"
+            android:fontFamily="@font/poppins" />
     </group>
 </menu>

@@ -18,10 +18,11 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="3dp"
+        android:fontFamily="@font/poppins"
         android:text="DOCUMENT FILL-UP AUTOMATION APP"
         android:textAlignment="center"
         android:textColor="@color/white"
-        android:textSize="18dp"
+        android:textSize="17dp"
         android:textStyle="bold" />
 
 

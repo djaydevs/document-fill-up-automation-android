@@ -55,14 +55,15 @@
                                 android:src="@drawable/ic_fillup" />
 
                             <TextView
-                                android:layout_width="100dp"
+                                android:layout_width="110dp"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="10dp"
                                 android:layout_marginBottom="10dp"
+                                android:fontFamily="@font/poppins"
                                 android:text="Document Fill-Up"
+                                android:textAlignment="center"
                                 android:textColor="@color/blue"
-                                android:textSize="18dp"
-                                android:textAlignment="center" />
+                                android:textSize="18dp" />
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
                     <androidx.cardview.widget.CardView
@@ -89,14 +90,15 @@
                                 android:src="@drawable/ic_addpeople" />
 
                             <TextView
-                                android:layout_width="100dp"
+                                android:layout_width="110dp"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="10dp"
                                 android:layout_marginBottom="10dp"
+                                android:fontFamily="@font/poppins"
                                 android:text="Residents Registration"
+                                android:textAlignment="center"
                                 android:textColor="@color/blue"
-                                android:textSize="18dp"
-                                android:textAlignment="center" />
+                                android:textSize="18dp" />
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
                     <androidx.cardview.widget.CardView
@@ -123,14 +125,15 @@
                                 android:src="@drawable/ic_people" />
 
                             <TextView
-                                android:layout_width="100dp"
+                                android:layout_width="110dp"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="10dp"
                                 android:layout_marginBottom="10dp"
+                                android:fontFamily="@font/poppins"
                                 android:text="Residents Data"
+                                android:textAlignment="center"
                                 android:textColor="@color/blue"
-                                android:textSize="18dp"
-                                android:textAlignment="center" />
+                                android:textSize="18dp" />
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
                     <androidx.cardview.widget.CardView
@@ -161,6 +164,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="10dp"
                                 android:layout_marginBottom="10dp"
+                                android:fontFamily="@font/poppins"
                                 android:text="Log Out"
                                 android:textColor="@color/blue"
                                 android:textSize="18dp" />

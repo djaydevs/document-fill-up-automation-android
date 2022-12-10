@@ -52,6 +52,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins"
+                android:id="@+id/eTLname"
                 />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -69,6 +70,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins"
+                android:id="@+id/eTFname"
                 />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -86,6 +88,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins"
+                android:id="@+id/eTMi"
                 />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -121,7 +124,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="number"
-                    android:fontFamily="@font/poppins" />
+                    android:fontFamily="@font/poppins"
+                    android:id="@+id/eTHn"
+                    />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -139,6 +144,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/poppins"
+                    android:id="@+id/eTSt"
                     />
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
@@ -158,7 +164,8 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp">
+            android:layout_marginRight="15dp"
+            android:id="@+id/rg">
 
             <RadioButton
                 android:layout_width="wrap_content"
@@ -167,13 +174,15 @@
                 android:textSize="20sp"
                 android:fontFamily="@font/poppins"
                 android:layout_marginRight="50dp"
+                android:id="@+id/rbtnMale"
                 />
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Female"
                 android:textSize="20sp"
-                android:fontFamily="@font/poppins"/>
+                android:fontFamily="@font/poppins"
+                android:id="@+id/rbtnFemale"/>
         </RadioGroup>
 
         <LinearLayout
@@ -198,6 +207,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/poppins"
                     android:inputType="number"
+                    android:id="@+id/eTAge"
                     />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -217,6 +227,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/poppins"
                     android:inputType="number"
+                    android:id="@+id/eTYos"
                     />
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
@@ -242,6 +253,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/poppins"
+                    android:id="@+id/eTDate"
                     />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -251,7 +263,8 @@
                android:layout_marginTop="10dp"
                android:layout_marginRight="20dp"
                android:layout_weight="2"
-               android:background="@drawable/calendar"/>
+               android:background="@drawable/calendar"
+               android:id="@+id/imgDate"/>
         </LinearLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -269,6 +282,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins"
+                android:id="@+id/eTPb"
                 />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -288,6 +302,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins"
             android:inputType="number"
+            android:id="@+id/eTCn"
             />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -296,10 +311,30 @@
             android:layout_height="wrap_content"
             android:text="SAVE"
             android:textSize="20sp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:fontFamily="@font/poppins"
+            android:id="@+id/btnSave"/>.
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="VIEW RECORD"
+            android:textSize="20sp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:fontFamily="@font/poppins"
+            android:id="@+id/btnView"/>.
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="UPDATE/DELETE RECORD"
+            android:textSize="20sp"
             android:layout_marginRight="20dp"
             android:layout_marginLeft="20dp"
             android:layout_marginBottom="50dp"
-            android:fontFamily="@font/poppins"/>.
+            android:fontFamily="@font/poppins"
+            android:id="@+id/btnUpdateDelete"/>.
 
     </LinearLayout>
     </ScrollView>

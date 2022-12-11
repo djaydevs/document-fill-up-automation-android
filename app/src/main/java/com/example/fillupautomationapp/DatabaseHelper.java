@@ -35,14 +35,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         cv.put("lname",Lname);
         cv.put("fname",Fname);
         cv.put("mi",Mi);
-        cv.put("house_num.",House_num);
+        cv.put("house_num",House_num);
         cv.put("street",Street);
         cv.put("gender",Gender);
         cv.put("age",Age);
         cv.put("year_of_stay",Year_of_stay);
         cv.put("birthday",Birthday);
         cv.put("birthplace",Birthplace);
-        cv.put("contact_num.",Contact_num);
+        cv.put("contact_num",Contact_num);
         long result = db.insert(tbl_name,null,cv);
 
         if (result == -1){
@@ -76,14 +76,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         cv.put("lname",Lname);
         cv.put("fname",Fname);
         cv.put("mi",Mi);
-        cv.put("house_num.",House_num);
+        cv.put("house_num",House_num);
         cv.put("street",Street);
         cv.put("gender",Gender);
         cv.put("age",Age);
         cv.put("year_of_stay",Year_of_stay);
         cv.put("birthday",Birthday);
         cv.put("birthplace",Birthplace);
-        cv.put("contact_num.",Contact_num);
+        cv.put("contact_num",Contact_num);
         db.update(tbl_name,cv,"rin = ?", new String[]{id});
         return true;
     }

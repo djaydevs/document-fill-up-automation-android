@@ -4,6 +4,8 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
+import android.content.Intent;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
@@ -13,6 +15,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 
 import com.example.fillupautomationapp.databinding.ActivityResidentsRegistrationBinding;
 
@@ -25,7 +28,7 @@ public class ResidentsRegistrationActivity extends DrawerBaseActivity {
     RadioButton g;
     RadioGroup rg;
     ImageView imgDate;
-    //Button btnViewRecord;
+    Button btnViewRecord, btnViewList, btnAdd;
     int day, month, year;
     ActivityResidentsRegistrationBinding activityResidentsRegistrationBinding;
 
@@ -41,21 +44,56 @@ public class ResidentsRegistrationActivity extends DrawerBaseActivity {
         eTDate =(EditText) findViewById(R.id.eTDate);
         imgDate =(ImageView) findViewById(R.id.imgDate);
         rg = (RadioGroup) findViewById(R.id.rg);
-        //btnViewRecord = (Button) findViewById(R.id.btnView);
+        btnViewRecord = (Button) findViewById(R.id.btnUpdateDelete);
+        btnViewList = (Button) findViewById(R.id.btnView);
+        btnAdd = (Button) findViewById(R.id.btnSave);
 
         ln = (EditText) findViewById(R.id.eTLname);
         fn = (EditText) findViewById(R.id.eTFname);
         mii = (EditText) findViewById(R.id.eTMi);
         hn = (EditText) findViewById(R.id.eTHn);
         st = (EditText) findViewById(R.id.eTSt);
-        int selectedGender = rg.getCheckedRadioButtonId();
-        g = findViewById(selectedGender);
+        /*int selectedGender = rg.getCheckedRadioButtonId();
+        g = findViewById(selectedGender);*/
         a = (EditText) findViewById(R.id.eTAge);
         yos = (EditText) findViewById(R.id.eTYos);
-        bd = (EditText) findViewById(R.id.eTDate);
         bp = (EditText) findViewById(R.id.eTPb);
         cn = (EditText) findViewById(R.id.eTCn);
 
+        btnViewRecord.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ResidentsRegistrationActivity.this, activity_record.class);
+                startActivity(intent);
+            }
+        });
+        btnViewList.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Cursor res = dbHelper.getData("0");
+                if(res.getCount() == 0){
+                    displayMessage("ERROR","No Record Found !");
+                }else{
+                    StringBuffer buffer = new StringBuffer();
+                    while(res.moveToNext()){
+                        buffer.append("RIN :" + res.getString(0)+"\n");
+                        buffer.append("Lastname :" + res.getString(1)+"\n");
+                        buffer.append("Firstname :" + res.getString(2)+"\n");
+                        buffer.append("Middle initial :" + res.getString(3)+"\n");
+                        buffer.append("House # :" + res.getString(4)+"\n");
+                        buffer.append("Street :" + res.getString(5)+"\n");
+                        buffer.append("Gender :" + res.getString(6)+"\n");
+                        buffer.append("Age :" + res.getString(7)+"\n");
+                        buffer.append("Year of stay :" + res.getString(8)+"\n");
+                        buffer.append("Birthday :" + res.getString(9)+"\n");
+                        buffer.append("Birthplace:" + res.getString(10)+"\n");
+                        buffer.append("Contact # :" + res.getString(11)+"\n");
+                    }
+                    displayMessage("Residents Data", buffer.toString());
+                }
+
+            }
+        });
         imgDate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -72,6 +110,23 @@ public class ResidentsRegistrationActivity extends DrawerBaseActivity {
                     }
                 },year, month, day);
                 dialog.show();
+            }
+        });
+        btnAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int selectedGender = rg.getCheckedRadioButtonId();
+                g = findViewById(selectedGender);
+                bd = findViewById(R.id.eTDate);
+                boolean res = dbHelper.InsertRecord(ln.getText().toString(),fn.getText().toString(),mii.getText().toString(),hn.getText().toString(),st.getText().toString(),
+                        g.getText().toString(),a.getText().toString(),yos.getText().toString(),bd.getText().toString(),bp.getText().toString(),
+                        cn.getText().toString());
+                if (res == true){
+                    Toast.makeText(ResidentsRegistrationActivity.this, "Record Added",Toast.LENGTH_LONG).show();
+                    refresh();
+                }else{
+                    Toast.makeText(ResidentsRegistrationActivity.this, "Error in saving record!", Toast.LENGTH_LONG).show();
+                }
             }
         });
     }
@@ -95,5 +150,5 @@ public class ResidentsRegistrationActivity extends DrawerBaseActivity {
         builder.setMessage(message);
         builder.show();
     }
-
+//50:25
 }

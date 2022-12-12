@@ -63,7 +63,7 @@ public class ResidentsRegistrationActivity extends DrawerBaseActivity {
         btnViewRecord.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ResidentsRegistrationActivity.this, activity_record.class);
+                Intent intent = new Intent(ResidentsRegistrationActivity.this, ResidentsDataActivity.class);
                 startActivity(intent);
             }
         });

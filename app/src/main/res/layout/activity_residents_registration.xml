@@ -48,12 +48,12 @@
             android:layout_marginRight="20dp"
             app:boxStrokeColor="@color/blue"
             >
+
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/eTLname"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/poppins"
-                android:id="@+id/eTLname"
-                />
+                android:fontFamily="@font/poppins" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -324,6 +324,7 @@
             android:textSize="20sp"
             android:layout_marginRight="20dp"
             android:layout_marginLeft="20dp"
+            android:layout_marginBottom="50dp"
             android:fontFamily="@font/poppins"
             android:id="@+id/btnView"/>.
         <Button

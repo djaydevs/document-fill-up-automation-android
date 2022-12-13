@@ -64,18 +64,18 @@ public class ResidentsDataActivity extends DrawerBaseActivity {
         Cursor res = dbHelper.getData("0");
         if(res.getCount() == 0){
             Toast.makeText(this, "No Record Found", Toast.LENGTH_LONG).show();
-            id= new String[]{"No Record Found"};
-            ln= new String[]{"No Record Found"};
-            fn= new String[]{"No Record Found"};
-            mii= new String[]{"No Record Found"};
-            hn= new String[]{"No Record Found"};
-            st= new String[]{"No Record Found"};
-            g= new String[]{"No Record Found"};
-            a= new String[]{"No Record Found"};
-            yos= new String[]{"No Record Found"};
-            bd= new String[]{"No Record Found"};
-            bp= new String[]{"No Record Found"};
-            cn= new String[]{"No Record Found"};
+            id= new String[]{"No Record"};
+            ln= new String[]{"No Record"};
+            fn= new String[]{"No Record"};
+            mii= new String[]{"NR"};
+            hn= new String[]{"No Record"};
+            st= new String[]{"No Record"};
+            g= new String[]{"No Record"};
+            a= new String[]{"No Record"};
+            yos= new String[]{"NR"};
+            bd= new String[]{"No Record"};
+            bp= new String[]{"No Record"};
+            cn= new String[]{"No Record"};
         }else{
             id = new String[res.getCount()];
             ln= new String[res.getCount()];
@@ -129,6 +129,7 @@ public class ResidentsDataActivity extends DrawerBaseActivity {
                         dialog.dismiss();
                         break;
                 }
+
             }
         };
         AlertDialog.Builder alert = new AlertDialog.Builder(ResidentsDataActivity.this);
@@ -173,6 +174,7 @@ public class ResidentsDataActivity extends DrawerBaseActivity {
         }
         dialog.show();
 
+
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -198,4 +200,5 @@ public class ResidentsDataActivity extends DrawerBaseActivity {
         });
 
     }
+
 }

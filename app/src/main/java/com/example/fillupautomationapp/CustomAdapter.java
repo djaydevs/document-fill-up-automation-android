@@ -9,6 +9,8 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 
+import org.w3c.dom.Text;
+
 public class CustomAdapter extends ArrayAdapter<String>{
     Context c;
     String[] id;
@@ -30,6 +32,7 @@ public class CustomAdapter extends ArrayAdapter<String>{
                          String[] cn) {
         super(context, R.layout.row_record,id);
         this.c = context;
+        this.id = id;
         this.ln = ln;
         this.fn = fn;
         this.mii = mii;
@@ -44,6 +47,7 @@ public class CustomAdapter extends ArrayAdapter<String>{
     }
 
     public class ViewHolder{
+        TextView Rin;
         TextView Lname;
         TextView Fname;
         TextView Mi;
@@ -63,6 +67,7 @@ public class CustomAdapter extends ArrayAdapter<String>{
             convertView = inflater.inflate(R.layout.row_record,null);
         }
         ViewHolder vh = new ViewHolder();
+        vh.Rin = (TextView) convertView.findViewById(R.id.rowId);
         vh.Lname = (TextView) convertView.findViewById(R.id.rowLn);
         vh.Fname = (TextView) convertView.findViewById(R.id.rowFn);
         vh.Mi = (TextView) convertView.findViewById(R.id.rowMI);
@@ -75,6 +80,7 @@ public class CustomAdapter extends ArrayAdapter<String>{
         vh.Birthplace = (TextView) convertView.findViewById(R.id.rowBp);
         vh.Contact_num = (TextView) convertView.findViewById(R.id.rowCn);
 
+        vh.Rin.setText(id[position]);
         vh.Lname.setText(ln[position]);
         vh.Fname.setText(fn[position]);
         vh.Mi.setText(mii[position]);

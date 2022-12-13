@@ -12,7 +12,7 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:background="@drawable/border"
-            android:layout_marginTop="75dp"
+            android:layout_marginTop="15dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:paddingBottom="40dp"
@@ -306,7 +306,7 @@
                 android:textSize="20sp"
                 android:layout_marginRight="20dp"
                 android:layout_marginLeft="20dp"
-                android:layout_marginBottom="50dp"
+                android:layout_marginBottom="10dp"
                 android:fontFamily="@font/poppins"
                 android:id="@+id/btnDelete"/>.
 

@@ -3,11 +3,33 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="75dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="3dp"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="RIN : "
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:fontFamily="@font/poppins"
+            android:layout_marginRight="5dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView "
+            android:fontFamily="@font/poppins"
+            android:id="@+id/rowId"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
         android:layout_marginBottom="3dp">
         <TextView
             android:layout_width="match_parent"
@@ -15,52 +37,48 @@
             android:text="Lastname : "
             android:textStyle="bold"
             android:textColor="#000000"
-            android:fontFamily="@font/poppins"/>
+            android:fontFamily="@font/poppins"
+            android:layout_marginRight="5dp"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="TextView "
             android:fontFamily="@font/poppins"
-            android:id="@+id/rowLn"/>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginBottom="3dp">
+            android:id="@+id/rowLn"
+            />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Firstname : "
             android:textStyle="bold"
             android:fontFamily="@font/poppins"
-            android:textColor="#000000"/>
+            android:textColor="#000000"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="10dp"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="TextView "
             android:fontFamily="@font/poppins"
             android:id="@+id/rowFn"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="MI : "
+            android:textStyle="bold"
+            android:fontFamily="@font/poppins"
+            android:textColor="#000000"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="10dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TV "
+            android:fontFamily="@font/poppins"
+            android:id="@+id/rowMI"/>
     </LinearLayout>
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginBottom="3dp">
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="MiddleInital : "
-        android:textStyle="bold"
-        android:fontFamily="@font/poppins"
-        android:textColor="#000000"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TextView "
-        android:fontFamily="@font/poppins"
-        android:id="@+id/rowMI"/>
-    </LinearLayout>
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -73,13 +91,15 @@
             android:textStyle="bold"
             android:fontFamily="@font/poppins"
             android:textColor="#000000"
+            android:layout_marginRight="5dp"
             />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView "
+            android:text="TextView"
             android:fontFamily="@font/poppins"
             android:id="@+id/rowHn"
+
             />
 
         <TextView
@@ -89,13 +109,15 @@
             android:textStyle="bold"
             android:fontFamily="@font/poppins"
             android:textColor="#000000"
-            android:layout_marginLeft="15dp"/>
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="5dp"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="TextView "
             android:fontFamily="@font/poppins"
-            android:id="@+id/rowStreet"/>
+            android:id="@+id/rowStreet"
+            android:layout_marginRight="5dp"/>
     </LinearLayout>
 
     <LinearLayout
@@ -109,22 +131,26 @@
             android:text="Age : "
             android:textStyle="bold"
             android:fontFamily="@font/poppins"
-            android:textColor="#000000"/>
+            android:textColor="#000000"
+            android:layout_marginRight="5dp"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView "
+            android:text="TextView"
             android:fontFamily="@font/poppins"
-            android:id="@+id/rowAge"/>
+            android:id="@+id/rowAge"
+            />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Gender : "
-            android:textStyle="bold"
+            android:layout_marginLeft="56dp"
+            android:layout_marginRight="5dp"
             android:fontFamily="@font/poppins"
+            android:text="Gender : "
             android:textColor="#000000"
-            android:layout_marginLeft="45dp"/>
+            android:textStyle="bold"/>
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -143,26 +169,23 @@
             android:text="Year of stay : "
             android:textStyle="bold"
             android:fontFamily="@font/poppins"
-            android:textColor="#000000"/>
+            android:textColor="#000000"
+            android:layout_marginRight="5dp"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView "
+            android:text="TextView"
             android:fontFamily="@font/poppins"
-            android:id="@+id/rowYstay"/>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginBottom="3dp">
+            android:id="@+id/rowYstay"
+            />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Birthday :"
             android:textStyle="bold"
             android:fontFamily="@font/poppins"
-            android:textColor="#000000"/>
+            android:textColor="#000000"
+            android:layout_marginRight="5dp"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -181,26 +204,25 @@
             android:text="Birthplace :"
             android:textStyle="bold"
             android:fontFamily="@font/poppins"
-            android:textColor="#000000"/>
+            android:textColor="#000000"
+            android:layout_marginRight="5dp"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="TextView "
             android:fontFamily="@font/poppins"
-            android:id="@+id/rowBp"/>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginBottom="3dp">
+            android:id="@+id/rowBp"
+            />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Contact #: "
             android:textStyle="bold"
             android:fontFamily="@font/poppins"
-            android:textColor="#000000"/>
+            android:textColor="#000000"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="12dp"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context=".ResidentsRegistrationActivity">
+    tools:context=".ResidentsRegistrationActivity"
+    android:background="@drawable/bg">
 
     <ScrollView
         android:layout_width="match_parent"

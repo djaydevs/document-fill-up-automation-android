@@ -44,7 +44,6 @@
                 android:drawableLeft="@drawable/ic_find"
                 android:fontFamily="@font/poppins"
                 android:hint="RIN"
-                android:drawableStart="15dp"
                 android:textColor="@color/black"
                 android:textSize="15sp"
                 android:textStyle="bold"

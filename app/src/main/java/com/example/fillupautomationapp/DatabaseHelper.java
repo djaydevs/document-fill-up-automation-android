@@ -9,13 +9,14 @@ import android.database.sqlite.SQLiteOpenHelper;
 import androidx.annotation.Nullable;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
-    public static final String db_name = "brgyDB";
-    public static final String tbl_name = "tbl_residents";
+    public static final String db_name = "brgyDB"; //Initialize database name
+    public static final String tbl_name = "tbl_residents"; //Initialize table name
     public DatabaseHelper(Context context) {
         super(context,db_name , null, 1);
     }
 
-    @Override
+
+    @Override //Create table
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(" CREATE TABLE " + tbl_name + "(rin integer primary key autoincrement, lname text, fname text , mi text, house_num text, street txt, gender text" +
                 ",age text, year_of_stay text, birthday text , birthplace text, contact_num)");
@@ -27,7 +28,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS " + tbl_name);
         onCreate(db);
     }
-
+    // Insert record function
     public boolean InsertRecord (String Lname, String Fname, String Mi, String House_num, String Street, String Gender, String Age, String Year_of_stay,
                                  String Birthday, String Birthplace, String Contact_num){
         SQLiteDatabase db = this.getWritableDatabase();
@@ -51,6 +52,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             return true;
         }
     }
+
     public Cursor getData(String id) {
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor res;
@@ -62,12 +64,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
         return res;
     }
-
+    // Delete data function
     public boolean deleteData (String id){
         SQLiteDatabase db = this.getWritableDatabase();
         db.delete(tbl_name, "rin=?", new String[]{id});
         return true;
     }
+    // Update data function
     public boolean updateData(String id, String Lname, String Fname, String Mi, String House_num, String Street, String Gender, String Age, String Year_of_stay,
                               String Birthday, String Birthplace, String Contact_num){
         SQLiteDatabase db = this.getWritableDatabase();

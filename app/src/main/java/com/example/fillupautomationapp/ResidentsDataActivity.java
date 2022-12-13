@@ -58,6 +58,7 @@ public class ResidentsDataActivity extends DrawerBaseActivity {
         dbHelper = new DatabaseHelper(ResidentsDataActivity.this);
         getData();
 
+        //Long press listview to update and delete record
         lvRecord.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
@@ -67,6 +68,7 @@ public class ResidentsDataActivity extends DrawerBaseActivity {
             }
         });
     }
+    //Get data and set text view in edit layout
     public void getData(){
         lvRecord = (ListView) findViewById(R.id.lvRecord);
         Cursor res = dbHelper.getData("0");
@@ -117,7 +119,7 @@ public class ResidentsDataActivity extends DrawerBaseActivity {
         CustomAdapter ca = new CustomAdapter(this, id, ln, fn, mii, hn, st, g, a, yos, bd, bp, cn);
         lvRecord.setAdapter(ca);
     }
-
+    //Delete record function
     public void deleteRecord(String id){
         final String getId =id;
         DialogInterface.OnClickListener dialoginterface = new DialogInterface.OnClickListener(){
@@ -148,6 +150,7 @@ public class ResidentsDataActivity extends DrawerBaseActivity {
                 .setPositiveButton("YES", dialoginterface)
                 .setNegativeButton("NO",dialoginterface).show();
     }
+    //Retrieve record from database
     public void retrieveRecord(String id){
         final String getId = id;
         Cursor res = dbHelper.getData(id);
@@ -184,7 +187,7 @@ public class ResidentsDataActivity extends DrawerBaseActivity {
         }
         dialog.show();
 
-
+        //Save button to update record
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -201,6 +204,8 @@ public class ResidentsDataActivity extends DrawerBaseActivity {
 
             }
         });
+
+        //Delete button to delete data set from form
         btnDelete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -208,6 +213,7 @@ public class ResidentsDataActivity extends DrawerBaseActivity {
                 deleteRecord(getId);
             }
         });
+        //Open date chooser
         imgDate2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -226,9 +232,6 @@ public class ResidentsDataActivity extends DrawerBaseActivity {
                 dialog.show();
             }
         });
-
-
-
     }
 
 }

@@ -53,13 +53,12 @@ public class ResidentsRegistrationActivity extends DrawerBaseActivity {
         mii = (EditText) findViewById(R.id.eTMi);
         hn = (EditText) findViewById(R.id.eTHn);
         st = (EditText) findViewById(R.id.eTSt);
-        /*int selectedGender = rg.getCheckedRadioButtonId();
-        g = findViewById(selectedGender);*/
         a = (EditText) findViewById(R.id.eTAge);
         yos = (EditText) findViewById(R.id.eTYos);
         bp = (EditText) findViewById(R.id.eTPb);
         cn = (EditText) findViewById(R.id.eTCn);
 
+        //View record in ListView
         btnViewRecord.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -67,6 +66,7 @@ public class ResidentsRegistrationActivity extends DrawerBaseActivity {
                 startActivity(intent);
             }
         });
+        //View added residents data
         btnViewList.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -94,6 +94,7 @@ public class ResidentsRegistrationActivity extends DrawerBaseActivity {
 
             }
         });
+        //Open Date Chooser
         imgDate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -112,6 +113,7 @@ public class ResidentsRegistrationActivity extends DrawerBaseActivity {
                 dialog.show();
             }
         });
+        //Add Resident data to data base
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -130,6 +132,7 @@ public class ResidentsRegistrationActivity extends DrawerBaseActivity {
             }
         });
     }
+    //Refresh Registration Form
     public void refresh(){
         ln.setText("");
         fn.setText("");
@@ -143,6 +146,7 @@ public class ResidentsRegistrationActivity extends DrawerBaseActivity {
         bp.setText("");
         cn.setText("");
     }
+    //Message Display
     public void displayMessage(String title, String message) {
         AlertDialog.Builder builder = new AlertDialog.Builder(ResidentsRegistrationActivity.this);
         builder.setCancelable(true);

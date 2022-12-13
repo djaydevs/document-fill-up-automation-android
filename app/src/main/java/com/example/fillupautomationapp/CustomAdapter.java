@@ -26,7 +26,7 @@ public class CustomAdapter extends ArrayAdapter<String>{
     String[] bp;
     String[] cn;
     LayoutInflater inflater;
-
+    //Custom adapter
     public CustomAdapter(Context context, String[] id, String[] ln, String[] fn , String[] mii, String[] hn
     ,String[] st, String[] g,  String[] a, String[] yos, String[] bd, String[] bp,
                          String[] cn) {
@@ -45,7 +45,7 @@ public class CustomAdapter extends ArrayAdapter<String>{
         this.bp = bp;
         this.cn = cn;
     }
-
+    //View holder
     public class ViewHolder{
         TextView Rin;
         TextView Lname;
@@ -60,6 +60,7 @@ public class CustomAdapter extends ArrayAdapter<String>{
         TextView Birthplace;
         TextView Contact_num;
     }
+
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         if (convertView == null){

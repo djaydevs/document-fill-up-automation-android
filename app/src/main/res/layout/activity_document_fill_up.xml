@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DocumentFillUpActivity">
+    tools:context=".DocumentFillUpActivity"
+    android:background="@drawable/bg">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -14,7 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="60dp"
         android:layout_marginBottom="20dp"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp">
@@ -34,7 +35,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="10dp">
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp">
 
             <EditText
                 android:layout_width="264dp"
@@ -42,9 +44,9 @@
                 android:paddingLeft="10dp"
                 android:background="@drawable/border"
                 android:drawableLeft="@drawable/ic_find"
+                android:drawablePadding="8dp"
                 android:fontFamily="@font/poppins"
                 android:hint="RIN"
-                android:drawableStart="15dp"
                 android:textColor="@color/black"
                 android:textSize="15sp"
                 android:textStyle="bold"
@@ -89,6 +91,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
+                    android:layout_marginBottom="3dp"
                     android:text="Name:"
                     android:textSize="20sp"
                     android:fontFamily="@font/poppins"
@@ -98,14 +101,14 @@
 
                 <TextView
                     android:id="@+id/tvName"
-                    android:layout_width="249dp"
+                    android:layout_width="261dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="10dp"
+                    android:layout_marginBottom="3dp"
                     android:fontFamily="@font/poppins"
-                    android:text="Lorem ipsum dolor"
                     android:textColor="@color/black"
-                    android:textSize="20sp"                    />
+                    android:textSize="20sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -126,12 +129,11 @@
 
                 <TextView
                     android:id="@+id/tvAge"
-                    android:layout_width="wrap_content"
+                    android:layout_width="280dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="5dp"
                     android:fontFamily="@font/poppins"
-                    android:text="Lorem"
                     android:textColor="@color/black"
                     android:textSize="20sp" />
             </LinearLayout>
@@ -154,14 +156,13 @@
 
                 <TextView
                     android:id="@+id/tvStay"
-                    android:layout_width="100dp"
+                    android:layout_width="200dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="5dp"
                     android:fontFamily="@font/poppins"
-                    android:text="Lorem "
                     android:textColor="@color/black"
-                    android:textSize="20sp"                    />
+                    android:textSize="20sp" />
             </LinearLayout>
 
             <TextView
@@ -177,15 +178,14 @@
 
             <TextView
                 android:id="@+id/tvAddress"
-                android:layout_width="match_parent"
+                android:layout_width="342dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
-                android:layout_marginBottom="15dp"
                 android:layout_marginTop="5dp"
+                android:layout_marginBottom="15dp"
                 android:fontFamily="@font/poppins"
-                android:text="Lorem  ipsum dolor sit amet, consectetuer adipiscing elit."
                 android:textColor="@color/black"
-                android:textSize="20sp"/>
+                android:textSize="20sp" />
 
         </LinearLayout>
 
@@ -264,7 +264,7 @@
                 android:text="SAVE DOCUMENT"
                 android:fontFamily="@font/poppins"
                 android:textSize="18sp"
-                android:layout_marginBottom="50dp"/>
+                android:layout_marginBottom="80dp"/>
         </LinearLayout>
 
     </LinearLayout>

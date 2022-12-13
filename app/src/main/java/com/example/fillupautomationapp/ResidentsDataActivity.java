@@ -3,6 +3,7 @@ package com.example.fillupautomationapp;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.database.Cursor;
@@ -10,10 +11,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
 import com.example.fillupautomationapp.databinding.ActivityResidentsDataBinding;
+
+import java.util.Calendar;
 
 public class ResidentsDataActivity extends DrawerBaseActivity {
     DatabaseHelper dbHelper;
@@ -32,6 +37,9 @@ public class ResidentsDataActivity extends DrawerBaseActivity {
     ListView lvRecord;
     View myView;
     Dialog dialog;
+
+    int day, month, year;
+
     ActivityResidentsDataBinding activityResidentsDataBinding;
 
     @Override
@@ -109,6 +117,7 @@ public class ResidentsDataActivity extends DrawerBaseActivity {
         CustomAdapter ca = new CustomAdapter(this, id, ln, fn, mii, hn, st, g, a, yos, bd, bp, cn);
         lvRecord.setAdapter(ca);
     }
+
     public void deleteRecord(String id){
         final String getId =id;
         DialogInterface.OnClickListener dialoginterface = new DialogInterface.OnClickListener(){
@@ -155,6 +164,7 @@ public class ResidentsDataActivity extends DrawerBaseActivity {
         EditText eTCn = (EditText)myView.findViewById(R.id.editCn);
         Button btnSave = (Button)myView.findViewById(R.id.btnSaveUpdate);
         Button btnDelete= (Button)myView.findViewById(R.id.btnDelete);
+        ImageView imgDate2 = (ImageView)myView.findViewById(R.id.imgDate2);
         if(res.getCount() == 0){
             Toast.makeText(ResidentsDataActivity.this,"No Record Found !",Toast.LENGTH_LONG).show();
         }else{
@@ -198,6 +208,26 @@ public class ResidentsDataActivity extends DrawerBaseActivity {
                 deleteRecord(getId);
             }
         });
+        imgDate2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                final Calendar calendar = Calendar.getInstance();
+                day = calendar.get(Calendar.DATE);
+                month = calendar.get(Calendar.MONTH);
+                year = calendar.get(Calendar.YEAR);
+                DatePickerDialog dialog = new DatePickerDialog(ResidentsDataActivity.this, android.R.style.Theme_Holo_Light_Dialog_MinWidth, new DatePickerDialog.OnDateSetListener() {
+                    @Override
+                    public void onDateSet(DatePicker datePicker, int year, int month, int day) {
+                        month = month+1;
+                        String date = month+"-"+day+"-"+year;
+                        eTDate.setText(date);
+                    }
+                },year, month, day);
+                dialog.show();
+            }
+        });
+
+
 
     }
 

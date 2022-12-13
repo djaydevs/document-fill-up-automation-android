@@ -87,7 +87,7 @@ public class ResidentsRegistrationActivity extends DrawerBaseActivity {
                         buffer.append("Year of stay :" + res.getString(8)+"\n");
                         buffer.append("Birthday :" + res.getString(9)+"\n");
                         buffer.append("Birthplace:" + res.getString(10)+"\n");
-                        buffer.append("Contact # :" + res.getString(11)+"\n");
+                        buffer.append("Contact # :" + res.getString(11)+"\n\n");
                     }
                     displayMessage("Residents Data", buffer.toString());
                 }

@@ -21,7 +21,7 @@ public class DrawerBaseActivity extends AppCompatActivity implements NavigationV
     DrawerLayout drawerLayout;
 
     @Override
-    public void setContentView(View view) {
+    public void setContentView(View view) { //setting navigation drawer
         drawerLayout = (DrawerLayout) getLayoutInflater().inflate(R.layout.activity_drawer_base, null);
         FrameLayout container = drawerLayout.findViewById(R.id.activityContainer);
         container.addView(view);
@@ -39,7 +39,7 @@ public class DrawerBaseActivity extends AppCompatActivity implements NavigationV
     }
 
     @Override
-    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) { //switch between navigation items
         drawerLayout.closeDrawer(GravityCompat.START);
 
         switch (item.getItemId()) {
@@ -72,7 +72,7 @@ public class DrawerBaseActivity extends AppCompatActivity implements NavigationV
         return false;
     }
 
-    protected void allocateActivityTitle(String titleString) {
+    protected void allocateActivityTitle(String titleString) { //set navigation title
         if (getSupportActionBar() !=null) {
             getSupportActionBar().setTitle(titleString);
         }

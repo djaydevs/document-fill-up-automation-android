@@ -21,7 +21,21 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical"
                 android:layout_gravity="center" >
-                
+                <ImageView
+                    android:layout_width="255dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/logovector"
+                    android:layout_gravity="center"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/poppins"
+                    android:text="Document process is now easy and convenient!"
+                    android:textColor="@color/blue"
+                    android:textSize="13dp"
+                    android:textStyle="bold"
+                    android:textAlignment="center" />
                 <GridLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -172,8 +186,6 @@
                     </androidx.cardview.widget.CardView>
 
                 </GridLayout>
-
-
             </LinearLayout>
         </ScrollView>
     </LinearLayout>

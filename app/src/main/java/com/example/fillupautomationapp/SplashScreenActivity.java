@@ -19,6 +19,6 @@ public class SplashScreenActivity extends AppCompatActivity {
                 startActivity(new Intent(SplashScreenActivity.this, LogInActivity.class));
                 finish();
             }
-        }, 5000); //5 seconds loading screen
+        }, 3000); //3 seconds loading screen
     }
 }

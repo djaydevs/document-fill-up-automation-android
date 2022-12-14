@@ -43,7 +43,6 @@ public class DocumentFillUpActivity extends DrawerBaseActivity {
     TextView name, age, stay, address;
     Spinner spinner;
     RadioGroup rg;
-    RadioButton choosedoc;
     Button search, save;
 
     Bitmap docCOI, docCOR, docCOC, scaleCOI, scaleCOR, scaleCOC;

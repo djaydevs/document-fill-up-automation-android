@@ -2,12 +2,15 @@ package com.example.fillupautomationapp;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
 
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -37,7 +40,6 @@ public class ResidentsDataActivity extends DrawerBaseActivity {
     ListView lvRecord;
     View myView;
     Dialog dialog;
-
     int day, month, year;
 
     ActivityResidentsDataBinding activityResidentsDataBinding;
@@ -59,6 +61,7 @@ public class ResidentsDataActivity extends DrawerBaseActivity {
         getData();
 
         //Long press listview to update and delete record
+        Toast.makeText(ResidentsDataActivity.this, "Long press residents data to edit or delete record.", Toast.LENGTH_LONG).show();
         lvRecord.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {

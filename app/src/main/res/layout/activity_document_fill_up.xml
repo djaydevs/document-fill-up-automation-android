@@ -32,30 +32,34 @@
             android:textColor="@color/blue"/>
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_marginTop="10dp"
-            android:layout_marginLeft="10dp">
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
 
             <EditText
-                android:layout_width="264dp"
-                android:layout_height="40dp"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_gravity="left"
                 android:paddingLeft="10dp"
-                android:background="@drawable/border"
+                android:background="@drawable/box_docfillup"
                 android:drawableLeft="@drawable/ic_find"
                 android:drawablePadding="8dp"
                 android:fontFamily="@font/poppins"
-                android:hint="RIN"
+                android:hint="Resident #"
                 android:textColor="@color/black"
-                android:textSize="15sp"
+                android:textSize="20dp"
                 android:textStyle="bold"
                 android:id="@+id/etSearch"/>
 
             <Button
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
+                android:layout_height="50dp"
+                android:layout_gravity="right"
+                android:background="@drawable/btnbox"
+                android:layout_marginLeft="10dp"
                 android:text="Search"
                 android:textSize="15sp"
                 android:id="@+id/btnSearch"/>
@@ -66,7 +70,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:background="@drawable/border"
+            android:background="@drawable/box_docfillup"
             android:layout_marginTop="10dp"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp">
@@ -200,9 +204,9 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Choose purpose of the document"
+                android:text="Choose Document Purpose"
                 android:textStyle="bold"
-                android:textSize="20sp"
+                android:textSize="20dp"
                 android:fontFamily="@font/poppins"
                 android:textColor="@color/blue"/>
 
@@ -211,14 +215,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginTop="8dp"
-                android:background="@drawable/border"/>
+                android:background="@drawable/box_docfillup"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
-                android:textSize="20sp"
-                android:text="Choose Documents:"
+                android:textSize="20dp"
+                android:text="Choose Documents"
                 android:fontFamily="@font/poppins"
                 android:textColor="@color/blue"
                 android:textStyle="bold"/>
@@ -262,9 +266,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
+                android:background="@drawable/btnbox"
                 android:text="SAVE DOCUMENT"
                 android:fontFamily="@font/poppins"
-                android:textSize="18sp"
+                android:textSize="20dp"
                 android:layout_marginBottom="80dp"/>
         </LinearLayout>
 
